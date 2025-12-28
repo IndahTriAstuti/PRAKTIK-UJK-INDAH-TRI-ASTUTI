@@ -177,20 +177,20 @@ function App() {
               <div className="card-body">
                 <h5 className="fw-bold mb-3">Data Siswa</h5>
 
-                <table className="table table-bordered">
-                  <thead>
-                    <tr>
+                <table className="table table-bordered table-hover align-middle">
+                  <thead className="table-primary">
+                    <tr className="text-center">
                       <th>Kode</th>
                       <th>Nama</th>
                       <th>Alamat</th>
                       <th>Tgl Lahir</th>
                       <th>Jurusan</th>
-                      <th>Aksi</th>
+                      <th className="text-center">Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
                     {siswaList.map((s) => (
-                      <tr key={s.id}>
+                      <tr key={s.id} className="text-center">
                         <td className="fw-bold text-primary">
                           {s.kode_siswa}
                         </td>
@@ -200,7 +200,7 @@ function App() {
                           {new Date(s.tgl_siswa).toLocaleDateString("id-ID")}
                         </td>
                         <td>{s.jurusan_siswa}</td>
-                        <td>
+                        <td className="text-center">
                           <button
                             className="btn btn-warning btn-sm me-1"
                             onClick={() => handleEdit(s)}
